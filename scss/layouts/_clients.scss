@@ -1,13 +1,16 @@
 /*Секция постоянные клиенты*/
 
 .clients-section__list {
+  
     display: flex;
     flex-wrap: wrap;
   
     justify-content: center;
     align-items: center;
-   
+
+    margin: -15px;
   }
+  
   
 .clients-section__link {
     display: flex;
@@ -15,7 +18,7 @@
     justify-content: center;
   
     width: 170px;
-    height: 86px;
+    height: 92px;
   
     border: 1px solid var(--icon-color) ;
     border-radius: 4%;
@@ -26,13 +29,16 @@
     &:focus {
   border: 1px solid var(--accent-color);
   }
-
-  
 }
   
 .clients-section__item {
+    margin: 15px;
+
     &:not(:last-child){
-    margin-right: 30px;
+      @include mq(desktop) {
+    margin-bottom: 0px;
+    margin-top: 0px;
+      }
   }
 }
 

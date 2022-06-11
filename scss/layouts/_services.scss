@@ -1,14 +1,21 @@
 /*Секция услуги*/
 .services-section {
-    padding-top: 0px;
+   
+    display: none;
+    
+    @include mq(desktop) {
+      display: block;
+      padding-top: 0px;
+
+    }
   }
   
 .services-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--indent);
+display: flex;
+flex-wrap: wrap;
+gap: var(--indent);
+}
   
-  }
   
 .services-list__item {
   --items: 3;

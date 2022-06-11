@@ -45,16 +45,30 @@ body {
 
 /*Секции*/
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-title {
   color: var(--primary-text-color);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1280px) {
+  .section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 /*
@@ -71,11 +85,34 @@ body {
 */
 /* Контейнер*/
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 448px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 448px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -784,19 +821,43 @@ textarea::placeholder {
 }
 
 .benefits-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: var(--indent);
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: var(--indent);
+  }
 }
 
 .benefits-item {
-  --items: 4;
+  --items: 1;
+}
+
+@media screen and (max-width: 767.98px) {
+  .benefits-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-item {
+    --items: 2;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .benefits-item {
+    --items: 4;
+  }
 }
 
 .benefits-list__h3-like {
@@ -805,6 +866,12 @@ textarea::placeholder {
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .benefits-list__h3-like {
+    text-align: center;
+  }
 }
 
 .benefits-list__p-like {
@@ -831,7 +898,14 @@ textarea::placeholder {
 
 /*Секция услуги*/
 .services-section {
-  padding-top: 0px;
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .services-section {
+    display: block;
+    padding-top: 0px;
+  }
 }
 
 .services-list {
@@ -895,11 +969,23 @@ textarea::placeholder {
 }
 
 .team-list__item {
+  --items: 1;
   background-color: var(--primary-white-color);
-  --items: 4;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-list__item {
+    --items: 2;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .team-list__item {
+    --items: 4;
+  }
 }
 
 .team-list__h3-like {
@@ -929,6 +1015,7 @@ textarea::placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: -15px;
 }
 
 .clients-section__link {
@@ -942,7 +1029,7 @@ textarea::placeholder {
       -ms-flex-pack: center;
           justify-content: center;
   width: 170px;
-  height: 86px;
+  height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4%;
   -webkit-transition: 250ms border cubic-bezier(0.4, 0, 0.2, 1);
@@ -953,8 +1040,15 @@ textarea::placeholder {
   border: 1px solid var(--accent-color);
 }
 
-.clients-section__item:not(:last-child) {
-  margin-right: 30px;
+.clients-section__item {
+  margin: 15px;
+}
+
+@media screen and (min-width: 1280px) {
+  .clients-section__item:not(:last-child) {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
 }
 
 .clients-icon {
