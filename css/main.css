@@ -204,12 +204,32 @@ img {
   letter-spacing: 0.03em;
   font-size: 26px;
   line-height: 1.2;
-  margin-right: 93px;
+  margin-right: 15px;
 }
 
 .logo--revers {
   color: var(--primary-white-color);
   background-color: var(--background-color);
+}
+
+@media screen and (min-width: 480px) {
+  .logo {
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    padding-bottom: 26px;
+    padding-top: 26px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .logo {
+    margin-right: 93px;
+  }
 }
 
 .logo__text {
@@ -647,7 +667,7 @@ textarea::placeholder {
   position: fixed;
   top: 0;
   width: 100vw;
-  min-height: 80px;
+  min-height: 60px;
   background-color: var(--primary-white-color);
   z-index: 9;
 }
@@ -661,7 +681,20 @@ textarea::placeholder {
           align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    min-height: 80px;
+  }
+}
+
 /*Site-nav* *address-nav*/
+@media screen and (max-width: 767.98px) {
+  .site-nav,
+  .address-nav {
+    display: none;
+  }
+}
+
 .site-nav__link {
   color: var(--primary-text-color);
   font-weight: 500;
@@ -746,6 +779,16 @@ textarea::placeholder {
   margin: 0;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1279.98px) {
+  .address-nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: auto;
+  }
+}
+
 .address-nav__item {
   list-style: none;
   padding: 0;
@@ -757,18 +800,36 @@ textarea::placeholder {
   font-weight: 500;
   letter-spacing: 0.02em;
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   -webkit-transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .address-nav__link {
+    font-size: 12px;
+    line-height: 1.16;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .address-nav__link {
+    font-size: 14px;
+    line-height: 1.14;
+    margin-bottom: 0px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .address-nav__link:hover, .address-nav__link:focus {
   color: var(--accent-color);
 }
 
-.address-nav__link--mailto {
-  margin-right: 50px;
+@media screen and (min-width: 1280px) {
+  .address-nav__link--mailto {
+    margin-right: 50px;
+  }
 }
 
 .address-nav__link--mailto:hover {
@@ -781,7 +842,35 @@ textarea::placeholder {
 
 .address-nav-icons {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .address-nav-icons--mailto {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .address-nav-icons--mailto {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .address-nav-icons--tel {
+    width: 10px;
+    height: 14px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .address-nav-icons--tel {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 /*Секция Герой*/
@@ -795,24 +884,40 @@ textarea::placeholder {
 .hero-title {
   color: var(--primary-white-color);
   text-transform: uppercase;
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
   line-height: 1.4;
   letter-spacing: 0,06em;
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 1280px) {
+  .hero-title {
+    font-size: 44px;
+  }
+}
+
 .overlay {
-  height: 600px;
+  height: 400px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/main/hero/hero.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main/hero/hero.jpg);
   background-color: var(--background-hero);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .overlay {
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 /*Секция преимущества*/

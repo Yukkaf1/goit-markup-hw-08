@@ -8,19 +8,26 @@
 .hero-title {
     color: var(--primary-white-color);
     text-transform: uppercase;
-    font-size: 44px;
+    font-size: 26px;
     font-weight: 900;
     line-height: 1.4;
     letter-spacing: 0,06em;
 
     margin-bottom: 30px;
+
+    @include mq(desktop) {
+      font-size: 44px;
+    }
 }
 
 .overlay {
-  height: 600px;
+  height: 400px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+
+  padding-top: 118px;
+  padding-bottom: 118px;
 
   background-image: 
   linear-gradient(
@@ -32,5 +39,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @include mq(tablet) {}
+
+  @include mq(desktop) {
+    height: 600px;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
 }
