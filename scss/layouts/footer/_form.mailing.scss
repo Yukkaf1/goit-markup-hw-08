@@ -1,19 +1,36 @@
 /*форма футер Подпишитесь на рассылку*/
 .form-footer {
-    position: absolute;
+  
+  
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+
+  @include mq(mobile) {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  @include mq(desktop) {
+    position: relative;
     right: 15px;
-  
-    display: flex;
-    flex-direction: column;
-    justify-self: flex-end;
-  
     width: 570px;
+    margin-left: auto;
+    text-align: start;
+    position: absolute;
+  }
+   
   }
   
 .form-mailing {
     display: flex;
     flex-direction: row;
     position: relative;
+
+    @include mq(not-desktop) {
+    flex-direction: column;
+    align-items: center;
+    }
   }
   
 .form-footer__title {
@@ -25,6 +42,11 @@
   }
   
 .label-email {
+
+  @include mq(not-desktop) {
+    display: none;
+  }
+
   position: absolute;
   top: 50%;
   left: 8%;
@@ -53,12 +75,21 @@
   
   color: var(--primary-white-color);
   
+  &::placeholder {
+    @include mq(desktop) {
+      color: transparent;
+      }
+    }
+
   &:focus + .label-email,
   &:not(:placeholder-shown) + .label-email {
       transform: translate(-20px, -35px);
       background-color: var(--background-color);
     }
 
+    @include mq(not-desktop) {
+      margin-bottom: 20px;
+      }
   }
   
 .form-mailing__button {

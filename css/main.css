@@ -1327,10 +1327,24 @@ textarea::placeholder {
 }
 
 .page-footer__container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
+  text-align: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .page-footer__container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .address-block {
+    margin-bottom: 60px;
+  }
 }
 
 .address-block__text {
@@ -1369,10 +1383,22 @@ textarea::placeholder {
 }
 
 /*Секция присоединяйтесь*/
-.join-box {
-  width: 206px;
-  height: 80px;
-  margin-left: 70px;
+@media screen and (min-width: 480px) {
+  .join-box {
+    margin-bottom: 60px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .join-box {
+    margin-bottom: 0px;
+    text-align: start;
+    margin-left: 70px;
+  }
 }
 
 .join-box__title {
@@ -1438,7 +1464,7 @@ textarea::placeholder {
 
 /*форма футер Подпишитесь на рассылку*/
 .form-footer {
-  position: absolute;
+  position: relative;
   right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1448,7 +1474,22 @@ textarea::placeholder {
       -ms-flex-direction: column;
           flex-direction: column;
   justify-self: flex-end;
-  width: 570px;
+}
+
+@media screen and (min-width: 480px) {
+  .form-footer {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .form-footer {
+    width: 570px;
+    margin-left: auto;
+    text-align: start;
+    position: absolute;
+  }
 }
 
 .form-mailing {
@@ -1460,6 +1501,18 @@ textarea::placeholder {
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .form-mailing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .form-footer__title {
@@ -1487,6 +1540,12 @@ textarea::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 1279.98px) {
+  .label-email {
+    display: none;
+  }
+}
+
 .form-mailing__email {
   padding-left: 16px;
   min-width: 358px;
@@ -1499,11 +1558,32 @@ textarea::placeholder {
   color: var(--primary-white-color);
 }
 
+@media screen and (min-width: 1280px) {
+  .form-mailing__email::-webkit-input-placeholder {
+    color: transparent;
+  }
+  .form-mailing__email:-ms-input-placeholder {
+    color: transparent;
+  }
+  .form-mailing__email::-ms-input-placeholder {
+    color: transparent;
+  }
+  .form-mailing__email::placeholder {
+    color: transparent;
+  }
+}
+
 .form-mailing__email:focus + .label-email,
 .form-mailing__email:not(:placeholder-shown) + .label-email {
   -webkit-transform: translate(-20px, -35px);
           transform: translate(-20px, -35px);
   background-color: var(--background-color);
+}
+
+@media screen and (max-width: 1279.98px) {
+  .form-mailing__email {
+    margin-bottom: 20px;
+  }
 }
 
 .form-mailing__button {

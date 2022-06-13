@@ -2,12 +2,19 @@
 
 .join-box {
 
-    width: 206px;
-    height: 80px;
-    
-    margin-left: 70px;
+  
+    @include mq(mobile) {
+    margin-bottom: 60px;
+    justify-content: center;
+    text-align: center;
     }
-    
+
+    @include mq(desktop) {
+      margin-bottom: 0px;
+      text-align: start;
+      margin-left: 70px;
+    }
+}  
 .join-box__title {
       color: var(--primary-white-color);
       text-transform: uppercase;
@@ -63,6 +70,3 @@
         fill: var(--primary-white-color);
         transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
       }
-      
-
-      

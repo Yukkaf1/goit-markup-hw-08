@@ -6,9 +6,23 @@
     padding-bottom: 60px; 
 
     &__container {
+       
+        display: block;
+        text-align: center;
+
+        @include mq(desktop) {
         position: relative;
         display: flex;
+
+        text-align: start;
+        }
       }
+}
+
+.address-block {
+    
+    @include mq(mobile) {
+        margin-bottom: 60px;}
 }
 
 .address-block__text {
