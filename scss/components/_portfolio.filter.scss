@@ -1,14 +1,30 @@
 /*фильтры портфолио*/
 
 .portfolio-filter {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+  @include mq(mobile-only) {
+    flex-wrap: wrap;
+    justify-content: start;
   }
-  
-  .portfolio-filter .portfolio-filter__item + .portfolio-filter__item {
-   margin-left: 8px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-filter__item {
+  margin-left: 8px;
+
+      @include mq(mobile-only) {
+    &:not(:nth-last-child(-n+2)) {
+      margin-bottom: 15px;
+    }
+
+    &:not(:nth-last-child(2)) {
+      margin-left: 8px;
+    }
   }
+ }
   
   .portfolio-filter__btn {
   transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1),
@@ -21,5 +37,5 @@
   background-color: var(--accent-color);
   color: var(--primary-white-color);}
 }
-  
+
   

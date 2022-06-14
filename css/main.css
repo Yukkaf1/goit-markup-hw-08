@@ -105,7 +105,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 720px;
+    width: 768px;
   }
 }
 
@@ -1201,14 +1201,35 @@ textarea::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 50px;
 }
 
-.portfolio-filter .portfolio-filter__item + .portfolio-filter__item {
+@media screen and (max-width: 767.98px) {
+  .portfolio-filter {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+.portfolio-filter__item {
   margin-left: 8px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .portfolio-filter__item:not(:nth-last-child(-n+2)) {
+    margin-bottom: 15px;
+  }
+  .portfolio-filter__item:not(:nth-last-child(2)) {
+    margin-left: 8px;
+  }
 }
 
 .portfolio-filter__btn {
@@ -1226,22 +1247,45 @@ textarea::placeholder {
 }
 
 /*Секции портфолио*/
+@media screen and (max-width: 1279.98px) {
+  .portfolio-container {
+    margin: 0px;
+  }
+}
+
 .portfolio-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: var(--indent);
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: var(--indent);
+  }
 }
 
 .portfolio-list__item {
   outline: 1px solid var(--border-color);
-  --items: 3;
   -webkit-transition: 250ms -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1), 250ms -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list__item {
+    --items: 2;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .portfolio-list__item {
+    --items: 3;
+  }
 }
 
 .portfolio-list__item:hover, .portfolio-list__item:focus {
@@ -1299,8 +1343,20 @@ textarea::placeholder {
 }
 
 .portfolio-card {
-  width: 370px;
-  padding: 20px 24px;
+  min-width: 354px;
+  /*width: 450px;
+
+    @include mq(tablet) {
+    width: 354px;
+    }
+    */
+}
+
+@media screen and (min-width: 1280px) {
+  .portfolio-card {
+    width: 370px;
+    padding: 20px 24px;
+  }
 }
 
 .portfolio-card__h3-like {
@@ -1464,8 +1520,6 @@ textarea::placeholder {
 
 /*форма футер Подпишитесь на рассылку*/
 .form-footer {
-  position: relative;
-  right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1485,6 +1539,8 @@ textarea::placeholder {
 
 @media screen and (min-width: 1280px) {
   .form-footer {
+    position: relative;
+    right: 15px;
     width: 570px;
     margin-left: auto;
     text-align: start;
