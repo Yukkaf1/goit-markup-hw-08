@@ -640,18 +640,18 @@
 </div>
 </footer>
 
-<!--Мобильное меню
+<!--Мобильное меню-->
 <div class="containet mobile-container">
 
-    <button class="mobile-menu__btn" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button="">
+    <button class="mobile-menu__btn is-open" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
       <svg class="mobile-menu__icon" width="24" height="24" aria-label="переключатель мобильного меню">
-        <use class="hmobile-menu__icon-cross" href="./images/icon/close_40px.svg"></use>
-        <use class="mobile-menu__icon-menu" href="./images/icon/menu_40px.svg"></use>
+        <use class="mobile-menu__icon-cross" href="./images/sprite.svg#icon-close"></use>
+        <use class="mobile-menu__icon-menu" href="./images/sprite.svg#menu"></use>
       </svg>
     </button>
 
   </button>
-  <div class="mobile-menu">
+  <div class="mobile-menu is-open" id="menu-container" data-menu>
   
     <ul class="mobile-nav__list">
     <li class="mobile-nav__item">Студия</li>
@@ -683,16 +683,13 @@
   </ul>
   </div>
   </div>
--->
+
 
 <!--Прокрутка
 <button class="scroll-to-top" type="button">
 </button>-->
+<script src="./js/mobile-menu.js"></script>
 <script src="./js/modal.js"></script>
-
-
-
-
 
 </body>
 </html>
