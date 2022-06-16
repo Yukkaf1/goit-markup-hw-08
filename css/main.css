@@ -394,7 +394,24 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin: 40px;
-  width: 448px;
+  width: 370px;
+}
+
+@media screen and (min-width: 1280px) {
+  .callback-form {
+    width: 448px;
+  }
+}
+
+.call-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: --var(--primary-text-color);
+  display: block;
+  margin-bottom: 12px;
 }
 
 .form-group {
@@ -465,7 +482,16 @@ textarea:focus {
 }
 
 .form-policy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .form-policy {
@@ -485,12 +511,18 @@ textarea:focus {
 
 .policy-link {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 1280px) {
+  .policy-link {
+    font-size: 14px;
+  }
 }
 
 .form-button {
@@ -552,6 +584,16 @@ textarea::placeholder {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1280px) {
+  .checkbox-label {
+    font-size: 14px;
+    line-height: 1,71;
+  }
 }
 
 .checkbox-icon {

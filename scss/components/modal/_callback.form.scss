@@ -32,9 +32,25 @@
     margin-left: auto;
     margin-right: auto;
     margin: 40px;
+    width: 370px;
+
+    @include mq(desktop) {
     width: 448px;
+    }
   }
   
+.call-title {
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: --var(--primary-text-color);
+  display: block;
+  margin-bottom: 12px;
+}
+
   .form-group {
     display: block;
     margin-bottom: 10px;
@@ -107,7 +123,10 @@
   }
   
   .form-policy {
+  display: flex;
   margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
   }
   
   .form-policy {
@@ -126,13 +145,17 @@
   
   .policy-link {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.7;
   
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   
   color: var(--accent-color);
+
+  @include mq(desktop) {
+    font-size: 14px;
+  }
   }
   
   .form-button {
