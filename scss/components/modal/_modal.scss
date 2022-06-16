@@ -4,8 +4,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100px;
-    height: 100px;
+   
     background-color:  var(--modal-backdrop-color);
     opacity: 1;
   
@@ -24,22 +23,28 @@
   }
   
   .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  
-  
-  transform: translate( -50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-  min-width: 528px;
-  min-height: 581px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%) scale(1.2);
+   
   background-color: var(--primary-white-color);
-  }
+  border-radius: 4px;
+    
+@include mq(tablet) {
+ 
+  min-width: 450px;
+  min-height: 609px;
+}
   
-  .modal {
-  transform: translate( -50%, -50%) scale(1.2);
+  @include mq(desktop) {
+    min-width: 528px;
+    min-height: 581px;}
+
+  
+ 
   }
+
   
   .modal-btn {
     position: absolute;
