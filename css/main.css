@@ -141,6 +141,12 @@ img {
   height: auto;
 }
 
+.ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /*
 ==== Сетка для колекции ====
 */
@@ -711,8 +717,20 @@ textarea::placeholder {
   cursor: pointer;
 }
 
+.mobile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: flex-start;
+}
+
 .mobile-menu {
   display: none;
+  overflow-y: scroll;
 }
 
 .mobile-menu.is-open {
@@ -725,25 +743,81 @@ textarea::placeholder {
           flex-direction: column;
   background-color: var(--primary-white-color);
   position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 600px;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 40px;
   z-index: 12;
 }
 
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+  .mobile-menu.is-open {
+    display: none;
+  }
+}
+
+.mobile-nav__list {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+}
+
 .mobile-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  justify-self: flex-start;
   margin-top: auto;
+  margin-bottom: 64px;
   list-style: none;
   padding: 0;
-  margin: 0;
+}
+
+.mobile-contacts__item + .mobile-contacts__item {
+  margin-bottom: 32px;
+}
+
+.mobile-contacts__tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-contacts__mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu__btn {
   position: absolute;
-  top: 20%;
-  right: 20%;
+  top: 10px;
+  right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -756,11 +830,29 @@ textarea::placeholder {
   padding: 0;
   width: 40px;
   height: 40px;
-  background-color: #fff;
   cursor: pointer;
   border: none;
-  background-color: var(--primary-white-color);
-  fill: aqua;
+  background-color: transparent;
+  z-index: 13;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu__btn {
+    display: none;
+  }
+}
+
+.mobile-menu__btn :hover .mobile-menu__icon {
+  fill: var(--accent-color);
+}
+
+.mobile-menu__btn :focus :hover .mobile-menu__icon {
+  fill: var(--accent-color);
+}
+
+.mobile-contacts__item {
+  list-style: none;
+  text-decoration: none;
 }
 
 .mobile-menu__icon {
@@ -778,23 +870,65 @@ textarea::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 11px;
-  height: 11px;
+  width: 40px;
+  height: 40px;
   padding: 0;
-  fill: red;
-  outline: solid salmon 1px;
+  fill: var(--logo-text-color);
 }
 
 .mobile-menu__icon-cross {
   display: none;
 }
 
-.mobile-menu.is-open .mobile-menu__icon-cross {
+.mobile-menu__btn.is-open .mobile-menu__icon-cross {
   display: block;
 }
 
-.mobile-menu.is-open .mobile-menu__icon-menu {
+.mobile-menu__btn.is-open .mobile-menu__icon-menu {
   display: none;
+}
+
+.mobile-menu__item {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-nav__item:not(:last-child) {
+  margin-bottom: 34px;
+  list-style: none;
+  text-decoration: none;
+  padding-left: 0px;
+}
+
+.mobile-nav__link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 0.02em;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.mobile-nav__link-current {
+  color: var(--accent-color);
+}
+
+.mobile-menu__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
 
 /*Хеадер*/
