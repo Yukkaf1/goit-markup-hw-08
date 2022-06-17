@@ -406,12 +406,12 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin: 40px;
-  width: 370px;
+  max-width: 370px;
 }
 
 @media screen and (min-width: 1280px) {
   .callback-form {
-    width: 448px;
+    max-width: 448px;
   }
 }
 
@@ -726,11 +726,11 @@ textarea::placeholder {
       -ms-flex-direction: column;
           flex-direction: column;
   justify-self: flex-start;
+  overflow-y: scroll;
 }
 
 .mobile-menu {
   display: none;
-  overflow-y: scroll;
 }
 
 .mobile-menu.is-open {
@@ -745,6 +745,7 @@ textarea::placeholder {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   bottom: 0;
   width: 100%;
   padding: 40px;
@@ -843,11 +844,11 @@ textarea::placeholder {
   }
 }
 
-.mobile-menu__btn :hover .mobile-menu__icon {
+.mobile-menu__btn:hover .mobile-menu__icon {
   fill: var(--accent-color);
 }
 
-.mobile-menu__btn :focus :hover .mobile-menu__icon {
+.mobile-menu__btn:focus :hover .mobile-menu__icon {
   fill: var(--accent-color);
 }
 
@@ -925,7 +926,7 @@ textarea::placeholder {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
-.mobile-menu__item :first-child {
+.mobile-menu__item:first-child {
   padding-left: 0;
 }
 

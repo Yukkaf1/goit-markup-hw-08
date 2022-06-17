@@ -301,10 +301,55 @@
   </div>
   </footer>
 
+<!--Мобильное меню-->
+<div class="containet mobile-container">
+
+  <button class="mobile-menu__btn" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+    <svg class="mobile-menu__icon" width="40px" height="40px" aria-label="переключатель мобильного меню">
+      <use class="mobile-menu__icon-cross" href="./images/sprite.svg#icon-close"></use>
+      <use class="mobile-menu__icon-menu" href="./images/sprite.svg#icon-menu"></use>
+    </svg>
+  </button>
+
+</button>
+<div class="mobile-menu" id="menu-container" data-menu>
+
+  <ul class="mobile-nav__list">
+  <li class="mobile-nav__item"><a href=./index.html class="mobile-nav__link ">Студия</li>
+  <li class="mobile-nav__item"><a href=./portfolio.html class="mobile-nav__link mobile-nav__link-current">Портфолио</li>
+  <li class="mobile-nav__item"><a href=./index.html class="mobile-nav__link">Контакты</li>
+  </ul class="mobile-nav__socials">
+
+<ul class="mobile-contacts">
+  <li class="mobile-contacts__item"> 
+    <a class="mobile-contacts__mail" href="mailto:info@devstudio.com">
+      info@devstudio.com</a>
+  </li>
+  <li class="mobile-contacts__item">
+    <a class="mobile-contacts__tel" href="tel:+380961111111">
+      +38 096 111 11 11</a>
+  </li>
+</ul>
+<ul class="mobile-menu__socials">
+<li class="mobile-menu__item">
+  <a href="" class="mobile-menu__link" rel="noopener noreferer">Instagram</li>
+<li class="mobile-menu__item">
+  <a href="" class="mobile-menu__link" rel="noopener noreferer">Twitter</li>
+<li class="mobile-menu__item">
+  <a href="" class="mobile-menu__link" rel="noopener noreferer">Facebook</li>
+<li class="mobile-menu__item">
+  <a href="" class="mobile-menu__link" rel="noopener noreferer">LinkedIn</li>
+</ul>
+</div>
+</div>
+
+
 <!--Прокрутка
 <button class="scroll-to-top" type="button">
-</button>
--->
+</button>-->
+<script src="./js/mobile-menu.js"></script>
+<script src="./js/modal.js"></script>
+
 
 </body>
 </html>

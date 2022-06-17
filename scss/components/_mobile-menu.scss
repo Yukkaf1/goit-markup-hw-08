@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: column;
     justify-self: flex-start;
+    overflow-y: scroll;
 }
 
 .mobile-menu {
 
 display: none;
-overflow-y: scroll;
+
 
 &.is-open {
 display: flex;
@@ -16,7 +17,9 @@ background-color: var(--primary-white-color);
 position: fixed;
 top: 0;
 left:0;
+right: 0;
 bottom: 0;
+
 width: 100%;
 
 padding: 40px;
@@ -104,11 +107,11 @@ z-index: 13;
     display: none;
 }
 
-:hover .mobile-menu__icon {
+&:hover .mobile-menu__icon {
     fill: var(--accent-color);
 }
 
-:focus :hover .mobile-menu__icon {
+&:focus :hover .mobile-menu__icon {
     fill: var(--accent-color);
 }
 }
@@ -188,7 +191,7 @@ z-index: 13;
     padding-right: 10px;
     border-right: 1px solid rgba(33,33,33,0.2);
 
-    :first-child {
+    &:first-child {
         padding-left: 0;
   }
   }
