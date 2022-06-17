@@ -32,10 +32,10 @@
     margin-left: auto;
     margin-right: auto;
     margin: 40px;
-    width: 370px;
+    max-width: 370px;
 
     @include mq(desktop) {
-    width: 448px;
+    max-width: 448px;
     }
   }
   
