@@ -16,6 +16,7 @@ background-color: var(--primary-white-color);
 position: fixed;
 top: 0;
 left:0;
+bottom: 0;
 width: 100%;
 
 padding: 40px;
@@ -178,6 +179,7 @@ z-index: 13;
     display:flex;
     list-style: none;
     padding: 0;
+    padding-bottom: 48px;
   }
 
 
