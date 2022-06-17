@@ -2,12 +2,10 @@
 
 .join-box {
 
-  
-    @include mq(mobile) {
     margin-bottom: 60px;
     justify-content: center;
     text-align: center;
-    }
+
 
     @include mq(desktop) {
       margin-bottom: 0px;

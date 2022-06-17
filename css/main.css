@@ -817,7 +817,7 @@ textarea::placeholder {
 }
 
 .mobile-menu__btn {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 15px;
   display: -webkit-box;
@@ -1716,14 +1716,12 @@ textarea::placeholder {
 }
 
 /*Секция присоединяйтесь*/
-@media screen and (min-width: 480px) {
-  .join-box {
-    margin-bottom: 60px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
-  }
+.join-box {
+  margin-bottom: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 @media screen and (min-width: 1280px) {
