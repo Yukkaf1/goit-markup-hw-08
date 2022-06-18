@@ -19,6 +19,22 @@
       }
 }
 
+.page-footer__container {
+    text-align: center;
+
+    @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    }
+
+    @include mq(desktop) {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+}
+
 .address-block {
     
     @include mq(mobile) {

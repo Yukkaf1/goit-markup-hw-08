@@ -939,6 +939,12 @@ textarea::placeholder {
 }
 
 /*Хеадер*/
+@media screen and (max-width: 767.98px) {
+  .header__container {
+    padding-top: 16px;
+  }
+}
+
 .header {
   border-bottom: 1px solid var(--border-color);
   position: fixed;
@@ -1276,6 +1282,19 @@ textarea::placeholder {
           align-items: center;
   margin-bottom: 30px;
   border-radius: 4px;
+}
+
+.benefits-item__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: inherit;
+      -ms-flex-positive: inherit;
+          flex-grow: inherit;
 }
 
 /*Секция услуги*/
@@ -1621,6 +1640,7 @@ textarea::placeholder {
 
 .portfolio-card {
   min-width: 354px;
+  padding: 20px 24px;
   /*width: 450px;
 
     @include mq(tablet) {
@@ -1674,6 +1694,35 @@ textarea::placeholder {
   }
 }
 
+.page-footer__container {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .page-footer__container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .address-block {
     margin-bottom: 60px;
@@ -1718,6 +1767,7 @@ textarea::placeholder {
 /*Секция присоединяйтесь*/
 .join-box {
   margin-bottom: 60px;
+  margin-top: 60px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1727,6 +1777,7 @@ textarea::placeholder {
 @media screen and (min-width: 1280px) {
   .join-box {
     margin-bottom: 0px;
+    margin-top: 0px;
     text-align: start;
     margin-left: 70px;
   }
@@ -1879,7 +1930,7 @@ textarea::placeholder {
 
 .form-mailing__email {
   padding-left: 16px;
-  min-width: 358px;
+  min-width: 350px;
   height: 50px;
   background-color: var(--background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
