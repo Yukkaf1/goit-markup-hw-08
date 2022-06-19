@@ -1,10 +1,5 @@
 
 /*Хеадер*/
-.header__container {
-  @include mq(mobile-only) {
-    padding-top: 16px;
-}
-}
 
 .header {
     border-bottom: 1px solid var(--border-color);
