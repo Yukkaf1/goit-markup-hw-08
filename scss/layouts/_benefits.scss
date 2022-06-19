@@ -9,7 +9,7 @@
       @include mq(tablet) {
       
       display: flex;
-      align-items: center;
+      align-items: flex-start;
     
       flex-wrap: wrap;
       gap: var(--indent);
@@ -17,8 +17,7 @@
   }
 
     .benefits-item {
-      display: flex;
-      flex-direction: column;
+  
       --items: 1;
 
       @include mq(mobile-only) {
@@ -66,8 +65,4 @@
       border-radius: 4px;
     }
     
-    .benefits-item__card {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
+    

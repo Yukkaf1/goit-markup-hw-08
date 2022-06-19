@@ -1253,9 +1253,9 @@ textarea::placeholder {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: var(--indent);
@@ -1263,13 +1263,6 @@ textarea::placeholder {
 }
 
 .benefits-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   --items: 1;
 }
 
@@ -1325,19 +1318,6 @@ textarea::placeholder {
           align-items: center;
   margin-bottom: 30px;
   border-radius: 4px;
-}
-
-.benefits-item__card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
 
 /*Секция услуги*/
