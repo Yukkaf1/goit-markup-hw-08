@@ -17,6 +17,8 @@
   }
 
     .benefits-item {
+      display: flex;
+      flex-direction: column;
       --items: 1;
 
       @include mq(mobile-only) {
@@ -47,11 +49,8 @@
     }
     
     .benefits-list__p-like {
-    display: flex;
-    flex-direction: column;
     color: var(--secondary-text-color);
     line-height: 1.7;
-    flex-grow: 1;
     }
     
     .benefits-item__meta {
@@ -70,4 +69,5 @@
     .benefits-item__card {
       display: flex;
       flex-direction: column;
+      flex-grow: 1;
     }
