@@ -216,18 +216,17 @@ img {
   letter-spacing: 0.03em;
   font-size: 24px;
   line-height: 1.2;
+  display: inline-block;
+}
+
+.logo--header {
   margin-right: 15px;
   padding-bottom: 16px;
   padding-top: 16px;
 }
 
-.logo--revers {
-  color: var(--primary-white-color);
-  background-color: var(--background-color);
-}
-
 @media screen and (min-width: 768px) {
-  .logo {
+  .logo--header {
     padding-bottom: 26px;
     padding-top: 26px;
     margin-right: 88px;
@@ -235,9 +234,21 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-  .logo {
+  .logo--header {
     margin-right: 93px;
     font-size: 26px;
+  }
+}
+
+.logo--revers {
+  color: var(--primary-white-color);
+  background-color: var(--background-color);
+}
+
+@media screen and (min-width: 1280px) {
+  .logo--revers {
+    font-size: 26px;
+    text-align: start;
   }
 }
 
@@ -288,8 +299,8 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%) scale(1.2);
-            transform: translate(-50%, -50%) scale(1.2);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
   }
 }
 
@@ -1412,6 +1423,11 @@ textarea::placeholder {
 }
 
 .team-list__h3-like {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.17;
+  text-align: center;
   margin-bottom: 10px;
 }
 
@@ -1565,12 +1581,6 @@ textarea::placeholder {
 }
 
 /*Секции портфолио*/
-@media screen and (max-width: 1279.98px) {
-  .portfolio-container {
-    margin: 0px;
-  }
-}
-
 .portfolio-list {
   display: block;
 }
@@ -1756,6 +1766,12 @@ textarea::placeholder {
   color: var(--primary-white-color);
   line-height: 1.7;
   margin-top: 20px;
+}
+
+@media screen and (min-width: 1280px) {
+  .address-block__text {
+    text-align: start;
+  }
 }
 
 .address-block__mailto {

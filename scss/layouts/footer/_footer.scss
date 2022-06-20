@@ -47,6 +47,12 @@
   line-height: 1.7;
 
   margin-top: 20px;
+
+  @include mq(desktop) {
+      text-align: start;
+  }
+
+
 }
 
 .address-block__mailto

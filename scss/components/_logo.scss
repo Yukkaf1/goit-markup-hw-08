@@ -8,15 +8,14 @@
     font-size: 24px;
     line-height: 1.2;
 
-    margin-right: 15px;
+    display: inline-block;
 
-    padding-bottom: 16px;
-    padding-top: 16px;
 
-    &--revers {
-        color: var(--primary-white-color);
-        background-color: var(--background-color);
-      }
+    &--header {
+    
+      margin-right: 15px;
+      padding-bottom: 16px;
+      padding-top: 16px;
 
       @include mq(tablet) {
         padding-bottom: 26px;
@@ -27,13 +26,22 @@
         @include mq(desktop) {
             margin-right: 93px;
             font-size: 26px;
+    }
+  }
+    &--revers {
+        color: var(--primary-white-color);
+        background-color: var(--background-color);
+      
+
+        @include mq(desktop) {
+            font-size: 26px;
+            text-align: start;
         }
   }
-  
+} 
 
 
 .logo__text {color: var(--accent-color);
     
     &--revers {color: var(--accent-color);}
 }
-

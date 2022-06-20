@@ -1,10 +1,4 @@
 /*Секции портфолио*/
-.portfolio-container {
-  @include mq(not-desktop) {
-    margin: 0px;
-  }
-}
-
 .portfolio-list {
 
 display: block;
