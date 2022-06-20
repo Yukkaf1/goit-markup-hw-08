@@ -36,9 +36,11 @@
 }
 
 .address-block {
-    
-    @include mq(mobile) {
-        margin-bottom: 60px;}
+    margin-bottom: 60px;
+
+    @include mq(desktop) {
+        text-align: start;
+        }
 }
 
 .address-block__text {
