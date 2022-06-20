@@ -1613,6 +1613,8 @@ textarea::placeholder {
   transition: 250ms -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1), 250ms -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1);
+  --items: 1;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1822,18 +1824,21 @@ textarea::placeholder {
 
 /*Секция присоединяйтесь*/
 .join-box {
-  margin-bottom: 60px;
-  margin-top: 60px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
 }
 
+@media screen and (max-width: 767.98px) {
+  .join-box {
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .join-box {
-    margin-bottom: 0px;
-    margin-top: 0px;
     text-align: start;
     margin-left: 70px;
   }
@@ -1910,13 +1915,7 @@ textarea::placeholder {
       -ms-flex-direction: column;
           flex-direction: column;
   justify-self: flex-end;
-}
-
-@media screen and (min-width: 480px) {
-  .form-footer {
-    width: 100%;
-    margin-bottom: 60px;
-  }
+  width: 100%;
 }
 
 @media screen and (min-width: 1280px) {

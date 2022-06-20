@@ -15,7 +15,9 @@ display: block;
   
     outline: 1px solid var(--border-color);
     transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1);
-  
+    --items: 1;
+    margin-bottom: 30px;
+
     @include mq(tablet) {
     --items: 2;
     }
